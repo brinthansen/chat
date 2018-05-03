@@ -32,6 +32,24 @@
   100% {
     color: blue;
   }
+
+  @keyframes rainbow2 {
+  20% {
+    color: #FFFFFF;
+  }
+  40% {
+    color:  #F5F5F5;
+  }
+  60% {
+    color: #FFFFF0;
+  }
+  80% {
+    color: grey;
+  }
+  100% {
+    color: green;
+  }
+
 </style>
 
 <style>
@@ -46,9 +64,13 @@
         padding: 0; }
       #messages li { padding: 5px 10px;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); }
-      #messages li:nth-child(odd) { color:white; background: blue;
+      #messages li:nth-child(odd) {
+        color:white;
+      background:blue; 
+      
       text-shadow: 0 1px 0 blue(0, 0, 0, 0.5); }
-      #messages { margin-bottom: 40px }
+      #messages li: { margin-bottom: 40px }
+      
 
     </style>
     <h1 id="rain">  Hello, you are here</h1>
@@ -59,9 +81,23 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+
+            
+
+
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
+      var password;
+      var pass1="dog";
+      password =prompt('Password...', '')
+      if (password==pass1)
+      tempAlert("close",5000);
+      else
+  {
+  window.location="https://zippy.gfycat.com/SnoopyScaredInchworm.webm";
+}
+
       $(function () {
         var socket = io();
         $('form').submit(function(){
@@ -78,4 +114,6 @@
       });
     </script>
   </body>
+
+  
 </html>
